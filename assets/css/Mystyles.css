@@ -1,0 +1,408 @@
+/* GLOBAL STYLES */
+
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+
+   text-decoration-color: red;
+   text-shadow: 3px 2px black;
+   font-family: "Comic Sans MS", cursive, sans-serif;
+   color: #ae9142;
+   font-size:10vw;
+   font-size: 70px;
+   overflow: hidden; /* Ensures the content is not revealed until the animation */
+   border-right: .100em solid orange; /* The typwriter cursor */
+   white-space: nowrap; /* Keeps the content on a single line */
+   margin: 10px 160px 0px 160px;/* Gives that scrolling effect as the typing happens */
+   letter-spacing: .15em; /* Adjust as needed */
+   animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .3s step-end infinite;
+ }
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 15em }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to{ border-color: transparent }
+  50% { border-color: orange }
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container
+{ 
+  width: 150px;
+  position: relative;
+  display: flex;
+  top: 0px;
+  justify-content: space-between;
+  padding-right: 10px;
+  padding-left: 45px;
+  
+}
+
+.container .card
+{
+  position: relative; 
+}
+
+.container .card .face
+{
+  width: 250px;
+  height: 200px;
+  transition: 0.5s;
+}
+
+.container .card .face.face1
+{
+  position: relative;
+  background: #0c2340;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(120px);
+}
+
+.container .card .face.face3
+{
+  position: relative;
+  background:  #ae9142;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(120px);
+}
+
+
+.container .card:hover .face.face1 
+{
+transform: translateY(50px);
+background: #000000;
+}
+
+.container .card:hover .face.face3 
+{
+transform: translateY(50px);
+background: #bfbfbf;
+}
+
+
+.container .card .face.face1 .content
+{
+  opacity: 0.2s;
+  transition: 0.5s;
+}
+
+
+.container .card .face.face1 .content img
+{
+  max-width: 100px; 
+}
+
+.container .card .face.face1 .content h3
+{
+  margin: 10px 0 0;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.container .card .face.face2
+{ 
+  
+  position: relative; 
+  top: 50px;
+  background: #fff; 
+  display: flex;
+  justify-content: center;
+  align items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+  transform: translateY(-130px);
+}
+
+.container .card:hover .face.face2
+{
+  transition: 0.5s; 
+  transform: translateY(0);
+}
+
+.container .card .face.face2 .content p
+{
+  margin: 0;
+  padding: 0;
+}
+
+#h2
+{
+   text-align: center;
+   font-family: "Arial Black", Gadget, sans-serif;
+   color: #ae9142;
+   font-size:10vw;
+   font-size: 60px;
+}
+
+#h3
+{
+   text-align: center;
+   font-family: "Arial Black", Gadget, sans-serif;
+   color:  #0c2340;
+   font-size:10vw;
+   font-size: 70px;
+}
+
+#h4
+{
+ 
+   color:  #0c2340;
+   font-size:10vw;
+   font-size: 17.5px;
+}
+
+#h5
+{
+   text-align: center;
+   font-family: "Arial Black", Gadget, sans-serif;
+   color:  #ae9142;
+   font-size:10vw;
+   font-size: 40px;
+}
+
+#h6
+{
+ text-decoration: underline;
+ text-decoration-color: red;
+ font-family: 'Open Sans', sans-serif;
+}
+
+#h7
+{
+
+   text-shadow: 2px 1px black;
+   font-family: "Trebuchet MS", Helvetica, sans-serif;
+   color: #8000ff;
+   font-size:10vw;
+   font-size: 60px;
+   padding-left: 30px;
+}
+
+#h8
+{
+   font-family: Verdana, Geneva, sans-serif;
+   color: #000000;
+   font-size:10vw;
+   font-size: 33px;
+   padding-left: 30px;
+   padding-right: 600px;
+   text-align: justify;
+}
+
+#h9
+{
+
+   text-shadow: 2px 1px black;
+   font-family: "Trebuchet MS", Helvetica, sans-serif;
+   color: #ff7733;
+   font-size:10vw;
+   font-size: 60px;
+   padding-left: 30px;
+}
+
+
+
+#h10
+{
+
+   text-shadow: 2px 1px black;
+   font-family: "Trebuchet MS", Helvetica, sans-serif;
+   color:  #0066ff;
+   font-size:10vw;
+   font-size: 60px;
+   padding-left: 30px;
+}
+
+#h11
+{
+
+   text-shadow: 2px 1px black;
+   font-family: "Trebuchet MS", Helvetica, sans-serif;
+   color:  #ff3399;
+   font-size:10vw;
+   font-size: 60px;
+   padding-left: 30px;
+}
+
+#h12
+{
+
+   text-shadow: 2px 1px black;
+   font-family: "Trebuchet MS", Helvetica, sans-serif;
+   color:  #00e600;
+   font-size:10vw;
+   font-size: 60px;
+   padding-left: 30px;
+}
+
+* {
+	box-sizing: border-box
+}
+body {
+
+	margin:0
+}
+.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5 {
+	display: none
+}
+img {
+	vertical-align: middle;
+}
+/* Slideshow container */
+.slideshow-container {
+	width: 480px;
+	position: relative;
+	margin:0 auto 25px;
+        float: right;
+        top: -370px;
+}
+
+.slideshow-container2 {
+	width: 480px;
+	position: relative;
+	margin:0 auto 25px;
+        float: right;
+        top: -400px;
+}
+
+.slideshow-container3 {
+	width: 480px;
+	position: relative;
+	margin:0 auto 25px;
+        float: right;
+        top: -420px;
+}
+
+.slideshow-container4 {
+	width: 520px;
+	position: relative;
+	margin:0 auto 25px;
+        float: right;
+        top: -390px;
+}
+
+.slideshow-container5 {
+	width: 520px;
+	position: relative;
+	margin:0 auto 25px;
+        float: right;
+        top: -450px;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 10px;
+	margin-top: -22px;
+	color: black;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+	background-color: #f1f1f1;
+	color: black;
+}
+/* Fading animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+ @-webkit-keyframes fade {
+ from {
+opacity: .4
+}
+to {
+	opacity: 1
+}
+}
+ @keyframes fade {
+ from {
+opacity: .4
+}
+to {
+	opacity: 1
+}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+.prev, .next, .text {
+	font-size: 11px
+}
+}
+/* The dots/bullets/indicators */
+.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+	background-color: #717171;
+
+}
+
+
+#section1
+{
+}
+
+#section2
+{
+}
+
+#section3
+{
+}
+
+#section4
+{
+}
+
+#section5
+{
+}
+
+#section
+{
+}
+

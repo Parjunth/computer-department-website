@@ -1,0 +1,51 @@
+/*body {
+	height: 100vh;
+	background: linear-gradient(0deg, #FFF 0%,transparent 100%),linear-gradient(90deg, transparent 0%,#FFF 100%),linear-gradient(45deg, rgba(118, 118, 118, 0.03) 0%, rgba(118, 118, 118, 0.03) 49%,rgba(148, 148, 148, 0.03) 49%, rgba(148, 148, 148, 0.03) 100%),linear-gradient(0deg, rgba(121, 121, 121, 0.1) 0%, rgba(121, 121, 121, 0.1) 43%,rgba(11, 11, 11, 0.1) 43%, rgba(11, 11, 11, 0.1) 100%),linear-gradient(90deg, rgba(41, 41, 41, 0.08) 0%, rgba(41, 41, 41, 0.08) 17%,rgba(182, 182, 182, 0.08) 17%, rgba(182, 182, 182, 0.08) 100%),linear-gradient(0deg, rgba(69, 69, 69, 0.15) 0%, rgba(69, 69, 69, 0.15) 3%,rgba(217, 217, 217, 0.15) 3%, rgba(217, 217, 217, 0.15) 100%),linear-gradient(135deg, rgba(197, 197, 197, 0.14) 0%, rgba(197, 197, 197, 0.14) 24%,rgba(24, 24, 24, 0.14) 24%, rgba(24, 24, 24, 0.14) 100%),linear-gradient(90deg, rgba(21, 21, 21, 0.01) 0%, rgba(21, 21, 21, 0.01) 65%,rgba(36, 36, 36, 0.01) 65%, rgba(36, 36, 36, 0.01) 100%),linear-gradient(90deg, rgb(30, 30, 30),rgb(116, 116, 116))
+}
+*/
+nav {
+  font-size: 100%;
+  line-height: 1.5;
+  position: relative;
+  width: 200px;
+  margin: 20px;
+}
+
+nav ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: -4px 0 0 0;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  background: #fff;
+  border-radius: 4px;
+  padding: 1em 1.52em;
+  color: #333;
+}
+
+nav a:hover {
+  background: #efefef;
+}
+
+nav header {
+  font-weight: 600;
+  display: block;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  padding: 1em 1.52em;
+}
+
+.content{
+	margin-left: 240px;
+}
+
+footer {
+	margin-top: 100px;
+}

@@ -1,0 +1,412 @@
+.hr-navi {
+	border: 2px solid #ae9142; 
+    margin-top: 0px;
+	margin-bottom: 0px;
+	
+}
+   
+#scroll {
+	border: 2px solid #ae9142; 
+    margin-top: 0px;
+	margin-bottom: 0px;
+	width: 100%;
+	top: -100px; 
+	transition: top 0.3s;
+	position: fixed;
+	z-index: 2;
+}
+  
+* {box-sizing: border-box;}
+
+/* Style the header */
+
+#navbar {
+  padding: 10px 19px;  
+  padding-right: 60px;
+  overflow: hidden;
+  background-color: #0c2340;
+  margin-top: 0px;
+  height: 130px;
+  font-family: 'Open Sans', sans-serif;
+  box-shadow: 0px 5px 0px #081629;
+}
+
+#Secabout {
+	font-weight: bold;
+	font-family: Georgia, serif;  
+	border-right: 1px solid #55657a;
+}
+
+#navbar a {
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 19px;
+  text-decoration: none;
+  font-size: 17px;  
+}
+
+#navbar a:hover {
+  background-color: #143b6b;
+  border-radius: 10px;
+
+
+}
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;  
+
+
+}
+
+#navbar2 {
+
+  overflow: hidden;
+  height: 66px;
+  margin-left: 42.25%;
+  margin-right: 4%;
+  margin-top: -2%;
+  background-color:#f2f2f2;
+
+}
+
+#navbar2 a {
+  float: right;
+  display: block;
+  color: #143b6c;
+  text-align: center;
+  padding: 24px 30px;
+  text-decoration: none;
+  font-size: 17px;  
+  position:relative;
+   z-index: 2;
+}
+
+#navbar2 a:hover {
+    height: 66px;
+	color: #040c16;
+}
+
+#navbar2 a:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  content: '.';
+  color: transparent;
+  background: #bed6f3;
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+}
+
+#navbar2 a:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%; 
+}
+
+#navbar2 {
+  
+  list-style: none;
+  text-align: center;
+  display: inline-block;
+
+}
+
+#navbar2 a,
+#navbar2 a:after,
+#navbar2 a:before {
+  transition: all .5s;
+}
+
+/*#navbar2 a.active {
+  background-color: #4CAF50;
+  color: white;
+}   */
+
+
+img {
+	padding: 17px 20px;
+}
+
+#navbar-scroll {
+  background-color: #0c2340;
+  position: fixed; /* Make it stick/fixed */
+  top: -100px; /* Hide the navbar 50 px outside of the top view */
+  width: 100%;
+  transition: top 0.3s; 
+  padding-right: 30px;
+  z-index: 5;
+  box-shadow: 0px 5px 0px #081629;
+}
+
+#navbar-scroll a {
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 24px 32px;
+  text-decoration: none;
+}
+
+#navbar-scroll a:hover {
+  background-color: #143b6b;
+}
+
+#navbar-scroll a:hover i {
+  color: black;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-repeat: no-repeat;
+  
+}
+
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+
+footer {
+	background-color: #04091e;
+	margin-bottom: 0px;
+    position: static;
+    width: 100%;
+
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  margin-right: -260px;
+
+}
+
+.column p {
+	height: 11vh;
+	color: white;
+}
+
+#copyright {
+	padding-left: 38px;
+	padding-top: 30px;
+	font-size: 12px;
+}
+
+.hr-foot {
+	margin-top: 2vh;
+	margin-left: 0vw;
+	width: 42%;
+	border: 1px solid red; 
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#made-by {
+	font-family: 'IBM Plex Sans', sans-serif;
+	padding-top: 20px;
+	padding-left: 38px;
+	color: #00e600;
+	font-size: 18px;
+	
+}
+
+footer img {
+	margin-top: -4%;
+	margin-left: -2%;
+}
+
+.address {
+	font-family: 'Quicksand', sans-serif;
+}
+
+.column a:link {
+	color:white;
+	text-decoration: none;
+}
+	
+.address-name {
+	font-family: 'Roboto', sans-serif;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+#image1 {
+	float: right;
+	margin-right: -16px;
+	margin-top: -22px;
+}
+
+.quote-title {
+		padding-left: 60px;
+		color: #0c2340;
+}
+
+.quote-title2 {
+	margin-top: -40px;
+	font-size: 55px;
+	font-family: 'Teko', sans-serif;
+	line-height: 65px;	
+}
+
+.quote-title2 hr {
+	border: 3px solid #ae9142;
+	margin-top: -40px;	
+	margin-left: -20px;
+	margin-right: 95%;	
+}
+
+.home-quote {
+	padding-top: 40px;
+	font-family: Georgia, serif;
+	font-size: 25px;
+}
+
+article {
+	padding: 16px;
+}
+
+.about{
+	font-family: Georgia, serif;  
+	font-size: 34px;
+	padding-left: 50px;
+	margin-top: 130px;
+}
+
+.about-topic{
+	margin-top: -30px;	
+	font-size: 17px;
+	padding-left: 50px;
+}
+
+.help {
+	font-family: 'Quicksand', sans-serif;
+	margin-top: 120px;
+	text-decoration: underline;
+	color: yellow;
+}
+
+.help a{
+	color: yellow;
+}
+
+/*
+article {
+	margin: -100px 100px 0px 260px; ( top right bottom left)
+} */
+
+.a-column1 {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  color: #08182b;
+}
+
+.a-column1:hover {
+	text-decoration: underline
+}
+
+
+.a-column2 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  text-align: justify;
+  margin-top: 37px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 19px;
+  color: #08182b;
+}
+
+
+.a-column3 {
+  float: left;
+  width: 24%;
+  padding: 10px;
+  text-align: right;
+  margin-top: 52px;
+}
+
+
+.a-row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.event{
+	font-family: Georgia, serif;  
+	font-size: 34px;
+	padding-right: 170px;
+	margin-top: 20px;
+	margin-bottom: -8px;
+	text-decoration: none;
+}
+
+.event:hover {
+	text-decoration: underline;
+}
+
+
+.newgif{
+	margin-top: -50px;
+	margin-right: 90px;
+}
+
+#event-img{
+	margin-top: -20px;
+}
+
+.vl {
+  border-left: 4px solid green;
+  height: 320px;
+  margin-left: 75%;
+  margin-top: 150px;
+  position: absolute;
+}
+
+.a-column3 p {
+ text-align: left;
+ padding-left: 30px;
+ margin-top: -10px;
+}

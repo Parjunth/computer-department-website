@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>UCOE Attendance page</title>
+	<link rel="stylesheet" href="assets/css/my_styles.css">
+	<link rel="stylesheet" href="assets/css/Mystyles2.css">
+	<link rel="stylesheet" href="assets/css/fonts.css">
+	<link rel="stylesheet" href="assets/css/all.css">
+	<link rel="stylesheet" href="assets/css/material-icons.css">
+</head>
+<body background="assets/images/coolbgt3.png">
+
+
+<hr class="hr-navi">
+<hr class="hr-navi" id="scroll">
+<div class="header" id="navbar">   <!-- Expand header class if needed-->
+ <div class="navbar-right">
+  <a href="login.html"><i class="fas fa-user-circle"></i></a>
+  <a href="https://universalcollegeofengineering.edu.in" target="_blank">UCOE <i class="material-icons md-18">launch</i></a> <!-- official website-->
+  <a href="home.html#E1">News</a>
+  <a href="home.html">Home</a> 
+  <a id="Secabout" href="team-info.html">About</a>
+  <img src="assets/images/logo4.png" alt="UCOE logo" title="Universal College of Engineering">
+ </div>
+</div>
+
+<div id="navbar2">
+	<a href="Events.html">Events</a>
+	<a href="#att">Attendance</a>
+	<a href="syllabus.html">Syllabus</a>
+	<a href="faculty.html">Faculty</a>
+	<a href="home.html#D1"> Department</a>
+	<a href="home.html"><i class="fas fa-home"></i></a>
+</div>
+
+<div id="navbar-scroll">
+	<a href="Events.html">Events</a>
+	<a href="#att">Attendance</a>
+	<a href="syllabus.html">Syllabus</a>
+	<a href="faculty.html">Faculty</a>
+	<a href="home.html#D1"> Department</a>
+	<a href="home.html"><i class="fas fa-home"></i></a>
+</div>
+<br> <br><br>
+<div class="typewriter">
+	<h1>Computer Dept. Attendance</h1>
+</div>
+	<br><br><br><br>
+		<marquee scrollamount="12">
+			<div id="ah2">
+				<img src="assets/images/warning.png" alt="warning" align="center"></img>Note: Highlighted students have attendance <75%<img src="assets/images/warning.png" alt="warning" align="center"></img>
+			</div>
+		</marquee>
+	<br><br> 
+ <div id="aalign" class="container">
+	<iframe id="myFrame" style="display:none" width="500" height="500"></iframe>
+ </div>
+ 
+<div class="acontainer">
+   <input type="button" value="SE" onclick = "openPdf()"/>
+   <input type="button" value="TE" onclick = "openPdf1()"/>
+   <input type="button" value="BE" onclick = "openPdf2()"/>
+</div>
+<div id="aalign">
+   <iframe id="myFrame" style="display:none" width="500" height="200"></iframe>
+</div>
+
+
+<script type="text/javascript">
+function openPdf()
+{
+var omyFrame = document.getElementById("myFrame");
+omyFrame.style.display="block";
+omyFrame.src = "pdf/se_3.pdf";
+}
+
+function openPdf1()
+{
+var omyFrame = document.getElementById("myFrame");
+omyFrame.style.display="block";
+omyFrame.src = "pdf/te.pdf";
+}
+
+function openPdf2()
+{
+var omyFrame = document.getElementById("myFrame");
+omyFrame.style.display="block";
+omyFrame.src = "pdf/be.pdf";
+}
+</script>
+
+
+
+<footer>
+	<div class="row">
+		<div class="column">
+			<p id="made-by">This website is made by </p>
+			
+			<a href="team-info.html"><img src="assets/images/Teamlogo2.png" alt="Team Brainic Logo"></a>
+			<p id="copyright">Copyright ©2019 All rights reserved</p>
+		</div>
+		<div class="column">
+			<p class="address-name">Universal College of<br>Engineering</p>
+			<p class="address">Near Bhajansons &amp; Punyadham,<br>Kaman Bhiwandi Road,<br>Vasai, Thane 401 212<br><br>
+			Contact Number:<br>+91 800 xxxx xxx<br>+91 800 xxxx xxx<br><br><a href="mailto:info.ucoe@universal.edu.in">info.ucoe@universal.edu.in</a></p>
+			<p class="help"><a href="chatbot.html">Need Help?</a></p>
+			<hr class="hr-foot" style="	color: red;">
+		</div>
+	</div>
+	
+</footer>
+
+
+<script>
+
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+// When the user scrolls to the top of the page, slide up the navbar (50px out of the top view)
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 140 || document.documentElement.scrollTop > 140) {
+    document.getElementById("navbar-scroll").style.top = "3px";
+	document.getElementById("scroll").style.top = "0";
+  } else {
+    document.getElementById("navbar-scroll").style.top = "-100px";
+	document.getElementById("scroll").style.top = "-100px";
+  }
+}
+
+</script>
+
+</body>
+</html>

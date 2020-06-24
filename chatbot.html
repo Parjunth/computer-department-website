@@ -1,0 +1,433 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+   color: 	 #0c2340;
+   font-size: 70px;
+   font-family: Forte;
+   font-size:10vw;
+   font-size: 70px;
+   overflow: hidden; /* Ensures the content is not revealed until the animation */
+   border-right: .100em solid orange; /* The typwriter cursor */
+   white-space: nowrap; /* Keeps the content on a single line */
+   margin: 250px 770px 800px 200px;/* Gives that scrolling effect as the typing happens */
+   letter-spacing: .15em; /* Adjust as needed */
+   animation: 
+    typing 3s steps(40, end),
+    blink-caret .3s step-end infinite;
+	
+ }
+ 
+ body{
+ overflow-y: hidden;
+ }
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 15em }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to{ border-color: transparent }
+  50% { border-color: transparent }
+
+}
+
+
+/* NOTE : The checkbox created before cancle button is for working the chatbot by enter insted of pressing send button 
+					 If we remove checkbox than the Chatbot will work only by clicking send button not by Enter key */
+
+img{
+float: center;
+-moz-user-select: none;
+-webkit-user-select: none;
+user-select: none;
+}
+img:hover{
+opacity: 0.5;
+}
+div.fixed{
+  position: fixed;
+  bottom: 80;
+  right: 140;
+}
+a:visited{
+color: yellow;
+}
+
+body{
+background-image:url("assets/images/bot11.jpg");
+background-repeat: no-repeat;
+background-size: 1366px 700px;
+}
+
+/* Full-width input fields */
+input[type=text] {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 25px;
+  font-family: Century Gothic;
+  font-size:15;
+}
+input:focus, textarea:focus, select:focus{
+        outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: white;
+  margin: 8px 0;
+  cursor: pointer;
+  font-family: Century Gothic;
+  font-size:20;
+  outline: none;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+  border-radius: 25px;
+  outline: none;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+  border-radius: 25px;
+  font-family: Century Gothic;
+}
+
+img.avatar {
+  padding: 0px;
+  float: left;
+  width: 30%;
+  border-radius:100px;
+  display: inline-block;
+}
+
+.vl {
+  float: left;
+  border-left: 6px solid green;
+  height: 150px;
+  display: inline-block;
+  border-radius: 400px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+}
+
+.container {
+  padding: 16px;
+  font-family: Century Gothic;
+  font-size:10;
+  text-align: left;
+  display: block;
+}
+
+.botmsg{
+  padding:20px;
+  font-family: Century Gothic;
+  font-size:20;
+  text-align: left;
+  display: inline-block;
+  color:white;
+  background-color: #04091e;
+  border-radius: 25px;
+  overflow: auto;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+  padding-top: 5%;
+  padding-left: 34%
+}
+/* Modal Content/Box */
+.modal-content {
+  background-color:white;
+  background-size:500px 630px;
+  background-repeat: repeat-x;
+  margin: 0% auto 5% auto;  /* 0% from the top, 5% from the bottom and centered */
+  border: 0px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+  border-radius: 25px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  width: 500px;
+  height: 450px;
+  overflow: auto;
+  bottom: 30;
+  right: 30;
+  position: fixed;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0px; 
+  border-radius: 200px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white; 
+  border-radius: 200px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #04091e; 
+}
+
+/* The Close Button (X) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: -15;
+  color: #000;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: translate(10em,0)} 
+  to {-webkit-transform: translate(0em,0)}
+}
+  
+@keyframes animatezoom {
+  from {transform:  translate(20em,0em)} 
+  to {transform:  translate(0em,0em)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+    }
+  .cancelbtn {
+     width: 100%;
+    }
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:active {
+  color: blue;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 15px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.7s;
+  font-family: Century Gothic;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+#name1{
+align: center;
+font-size: large;
+font-family: 'Open Sans', sans-serif;
+
+}
+
+
+</style>
+</head>
+<body link="yellow">
+<div class="typewriter"><h1>Chat Bot</h1></div>
+<div id="id01" class="modal">
+  <form class="modal-content animate" name="myform" autocomplete="off">
+    <div class="imgcontainer">
+      <span onclick="window.location.reload();" class="close" title="Close Modal">&times;</span></br>
+	  <div class="vl"></div>
+      <img src="bot_data/215638179Untitled-3-512.png" class="avatar" title="I am ChatBot | Created by Team Brainiac"></br>
+    </div>
+	<div class="botmsg"><p id="bot"><a>Hello, how may i help you ?</a></p></div>
+    <div class="container">
+      <input type="text" style="bottom:20;" name="mytext" id="u_msg" placeholder="Encryption by Team Brainiac" onfocus="this.value=''" required>
+      <button id="send" style="width:60px;height:60px;margin-left:0px; color: transparent; background-color: transparent; border-color: transparent; cursor: default;" onclick="window.onclick(reply())" onclick="document.myform.mytext.focus();"><img src="bot_data/send.png" style="width:60px;height:60px;margin-left:0px;"></button></br>
+	  <input type="checkbox" oninvalid="this.setCustomValidity('IGNORE THIS')" required>
+	  <button type="button" onclick="window.location.reload();" class="cancelbtn" required>Cancel</button>
+    </div>
+  </form>
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+	else
+	{
+		document.myform.mytext.focus();
+	}
+}
+function reply()
+{
+	a=document.getElementById("u_msg").value
+	if (a.indexOf("map") != -1)
+	{
+		var str = "Map";
+		document.getElementById("bot").innerHTML += "<br><br> Here You Go > "+str.link("assets/images/map.png");
+	}
+	else if (a.indexOf("event") != -1)
+	{
+		var str = "Events";
+		document.getElementById("bot").innerHTML += "<br><br> Check Out Here > "+str.link("Events.html");
+	}
+	else if (a.indexOf("fee") != -1)
+	{
+		document.getElementById("bot").innerHTML += "<br><br> Total Fees for Acadamic Year: <br> SE Fees = 1,20,227/- <br> TE Fees = 1,20,578/- <br> BE Fees = 1,20,958/-";
+	}
+	else if (a.indexOf("home") != -1 || a.indexOf("ucoe") != -1 || a.indexOf("Home") != -1)
+	{
+		var str = "UCoE_COMPS";
+		document.getElementById("bot").innerHTML += "<br><br> Here You Go > "+str.link("home.html");
+	}
+	else if (a.indexOf("department") != -1)
+	{
+		var str = "Department";
+		document.getElementById("bot").innerHTML += "<br><br> Here You Go > "+str.link("home.html");
+	}
+	else if (a.indexOf("faculty") != -1 || a.indexOf("staff") != -1)
+	{
+		var str = "Faculty Details";
+		document.getElementById("bot").innerHTML += "<br><br> Here You Go > "+str.link("faculty.html");
+	}
+	else if (a.indexOf("syllabus") != -1 || a.indexOf("portion") != -1)
+	{
+		var str = "Syllabus";
+		document.getElementById("bot").innerHTML += "<br><br> Check Out Here > "+str.link("syllabus.html");
+	}
+	else if (a.indexOf("attend") != -1)
+	{
+		var str = "Attendance";
+		document.getElementById("bot").innerHTML += "<br><br> Check Out Here > "+str.link("Attendance.html");
+	}
+	else if (a.indexOf("about") != -1 || a.indexOf("contact") != -1)
+	{
+		var str = "About Us";
+		document.getElementById("bot").innerHTML += "<br><br> Here You Go > "+str.link("team-info.html");
+	}
+	else if (a.indexOf("log") != -1 || a.indexOf("sign") != -1)
+	{
+		var str = "SignUp/Login ";
+		document.getElementById("bot").innerHTML += "<br><br> Here You Go > "+str.link("login.html");
+	}
+	else if (a.indexOf("hi") != -1 || a.indexOf("hello") != -1 || a.indexOf("hey") != -1)
+	{
+		document.getElementById("bot").innerHTML += "<br><br> Hey there, <br> how may i help you 😊";
+	}
+	else if (a.indexOf("team") != -1 || a.indexOf("born") != -1 || a.indexOf("create") != -1 || a.indexOf("you") != -1 || a.indexOf("name") != -1 || a.indexOf("founder") != -1 || a.indexOf("help") != -1)
+	{
+		var str = "Team Brainiac";
+		document.getElementById("bot").innerHTML += "<br><br> I am ChatBot 🤖 <br> Created By Team Brainiac <br> Founders : Parth , Meet , Karandeep <br> For More Info > "+str.link("teambrainiac.html") + "<br><br> How may i help you ?";
+	}
+	else if (a=="")
+	{
+		document.getElementById("bot").innerHTML += "<br><br> Type Something 😑";
+	}
+	else if (a.indexOf("joke") != -1)
+	{
+		document.getElementById("bot").innerHTML += "<br><br> Oh want joke ? <br> Here you go... <br> Doctor: I'm sorry but you suffer from a terminal illness and have only 10 to live. <br> Patient: What do you mean, 10? 10 what? Months? Weeks?! <br> Doctor: Nine. <br> 😂";
+	}
+	else
+	{
+		document.getElementById("bot").innerHTML += "<br><br> 😅 Sorry, I didn't get that. <br> Can you rephrase?";
+	}
+} 
+</script>
+
+<div class="fixed">
+	<div class="tooltip">
+		<img src="bot_data/bot.png" style="width:75px;height:75px;" onclick="document.getElementById('id01').style.display='block'">
+		<span class="tooltiptext" head="bot"> I am ChatBot, <br> can assist you with the following services... </span>
+	</div>	
+</div>
+
+</body>
+</html>

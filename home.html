@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>UCOE Computer Department</title>
+	<link rel="stylesheet" href="assets/css/my_styles.css">
+	<link rel="stylesheet" href="assets/css/fonts.css">
+	<link rel="stylesheet" href="assets/css/all.css">
+	<link rel="stylesheet" href="assets/css/material-icons.css">
+
+<style>
+/* NOTE : The checkbox created before cancle button is for working the chatbot by enter insted of pressing send button 
+					 If we remove checkbox than the Chatbot will work only by clicking send button not by Enter key */
+				
+
+img{
+float: center;
+-moz-user-select: none;
+-webkit-user-select: none;
+user-select: none;
+}
+
+img:hover{
+opacity: 0.5;
+}
+
+
+div.fixed1{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+a:visited {
+color: yellow;
+}
+
+/* Full-width input fields */
+input[type=text] {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 25px;
+  font-family: Century Gothic;
+  font-size:15;
+}
+input:focus, textarea:focus, select:focus{
+        outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: white;
+  margin: 8px 0;
+  cursor: pointer;
+  font-family: Century Gothic;
+  font-size:20;
+  outline: none;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+  border-radius: 25px;
+  outline: none;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+  border-radius: 25px;
+  font-family: Century Gothic;
+}
+
+img.avatar {
+  padding: 0px;
+  float: left;
+  width: 30%;
+  border-radius:100px;
+  display: inline-block;
+}
+
+.vl1 {
+  float: left;
+  border-left: 6px solid green;
+  height: 150px;
+  display: inline-block;
+  border-radius: 400px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+}
+
+.container {
+  padding: 16px;
+  font-family: Century Gothic;
+  font-size:10;
+  text-align: left;
+  display: block;
+  z-index: 99;
+  
+
+}
+
+.botmsg{
+  padding:20px;
+  font-family: Century Gothic;
+  font-size:20;
+  text-align: left;
+  display: inline-block;
+  color:white;
+  background-color: #04091e;
+  border-radius: 25px;
+  overflow: auto;
+  
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 99; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+  padding-top: 5%;
+  padding-left: 34%
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color:white;
+  background-size:500px 630px;
+  background-repeat: repeat-x;
+  margin: 0% auto 5% auto;  /* 0% from the top, 5% from the bottom and centered */
+  border: 0px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+  border-radius: 25px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  width: 500px;
+  height: 450px;
+  overflow: auto;
+  bottom: 30;
+  right: 30;
+  position: fixed;
+}
+
+/* width */
+.modal-content::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+.modal-content::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0px; 
+  border-radius: 200px;
+}
+ 
+/* Handle */
+.modal-content::-webkit-scrollbar-thumb {
+  background: white; 
+  border-radius: 200px;
+}
+
+/* Handle on hover */
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #04091e; 
+}
+
+/* The Close Button (X) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: -15;
+  color: #000;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: translate(10em,0)} 
+  to {-webkit-transform: translate(0em,0)}
+}
+  
+@keyframes animatezoom {
+  from {transform:  translate(20em,0em)} 
+  to {transform:  translate(0em,0em)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+    }
+  .cancelbtn {
+     width: 100%;
+    }
+}
+
+a:link {
+  text-decoration: none;
+
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:active {
+  color: blue;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 15px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.7s;
+  font-family: Century Gothic;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+	</style>
+</head>
+
+<body background="assets/images/bgg.png"> 
+
+<hr class="hr-navi">
+<hr class="hr-navi" id="scroll">
+<div class="header" id="navbar">   <!-- Expand header class if needed-->
+ <div class="navbar-right">
+  <a href="login.html"><i class="fas fa-user-circle"></i></a>
+  <a href="https://universalcollegeofengineering.edu.in" target="_blank">UCOE <i class="material-icons md-18">launch</i></a> <!-- official website-->
+  <a href="#E1">News</a>
+  <a href="#home">Home</a> 
+  <a id="Secabout" href="team-info.html">About</a>
+  <img src="assets/images/logo4.png" alt="UCOE logo" title="Universal College of Engineering">
+ </div>
+</div>
+
+<div id="navbar2">
+	<a href="Events.html">Events</a>
+	<a href="Attendance.html">Attendance</a>
+	<a href="syllabus.html">Syllabus</a>
+	<a href="faculty.html">Faculty</a>
+	<a href="#D1"> Department</a>
+	<a href="#home"><i class="fas fa-home"></i></a>
+</div>
+
+<div id="navbar-scroll">
+	<a href="Events.html">Events</a>
+	<a href="Attendance.html">Attendance</a>
+	<a href="syllabus.html">Syllabus</a>
+	<a href="faculty.html">Faculty</a>
+	<a href="#D1"> Department</a>
+	<a href="#home"><i class="fas fa-home"></i></a>
+</div>
+
+<div class="content">
+<img id="image1" src="assets/images/building.jpg" alt="College Building" title="Front Building" width="55%">
+</div>
+
+<div class="quote-title">
+	<div class="quote-title1">
+		</p>CAMPUS</p>
+	</div>
+	<div class="quote-title2">
+		<p> A Home Under The <br>Roof </p>  
+		<hr> 
+	</div>
+	<div class="home-quote">
+		<q>An investment in knowledge always <br>pays the best interest</q> 
+	</div>
+</div>
+
+<div id="E1">
+<div id="D1">
+<br><br><br>
+
+<div class="a-row1">
+	<div class="a-column1">
+		<p  class="about">About</p>
+		<p  class="about-topic">Computer Department</p>
+	</div>
+	<div class="a-column2">		
+		<article>
+		<br><br><br>
+			<p>The computer department of universal college of engineering focuses on making our students keen about the core subjects of the branch.
+				The branch encourages our students to be tech savvy and aware of this very dynamic field. The conduct of department is designed to motivate 
+				students interest into various aspects of the field and gives platform to stage their individuality and
+				creativity in the form of projects.
+			</p>
+			<p>In terms of learning aspects, various workshops are held in multiple frequencies throughout the year under the banner of CSI and 
+				CESA(and much more) which encourages students and motivates them to push their boundaries. There are multiple competitions held every year
+				 in college organised tech fests like VYRO and TANTROTSAV which helps students measure their knowledge and upgrade their practical skills. 
+				The department also encourages students to compete on a national level under the guidance of our well experienced faculties.
+			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere eget tellus sed laoreet. Aenean venenatis justo sit amet odio 
+			sodales, feugiat tempor tellus sagittis. Cras quis augue vestibulum, scelerisque mi nec, laoreet felis. Suspendisse a eleifend lorem.
+			Nunc interdum nibh quis magna ultrices euismod. Morbi ut posuere augue, quis varius ligula. Morbi sodales risus ut eros convallis, nec
+			sagittis eros tincidunt. Vestibulum nec laoreet ipsum.
+			</p>
+		</article>
+		
+	</div>
+		<div class="vl"></div>
+	<div class="a-column3">
+<br><br><br>
+		<a href="#" id="E1" class="event">Events</a><img class="newgif" src="assets/images/new-icon-animation.gif" height="80px">
+		<img id="event-img" src="assets/images/trantrotsav.jpg" alt="Trantrotsav 2k19" height="200px">
+		<p>Tantrotsav 2K19 <br>held on 14th Sept......</p>
+	</div>
+</div>
+</div>
+</div>
+
+<aside>
+<p></p>
+</aside>
+
+
+<div id="id01" class="modal">
+  <form class="modal-content animate" name="myform" autocomplete="off">
+    <div class="imgcontainer">
+      <span onclick="window.location.reload();" class="close" title="Close Modal">&times;</span></br>
+	  <div class="vl1"></div>
+      <img src="bot_data/215638179Untitled-3-512.png" class="avatar" title="I am ChatBot | Created by Team Brainiac"></br>
+    </div>
+	<div class="botmsg"><p id="bot"><a>Hello, how may i help you ?</a></p></div>
+    <div class="container">
+      <input type="text" style="bottom:20;" name="mytext" id="u_msg" placeholder="Encryption by Team Brainiac" onfocus="this.value=''" required>
+      <button id="send" style="width:80px;height:80px;margin-left:0px; color: transparent; background-color: transparent; border-color: transparent; cursor: default;" onclick="window.onclick(reply())" onclick="document.myform.mytext.focus();"><img src="bot_data/send.png" style="width:80px;height:80px;margin-left:0px;"></button></br>
+	  <input type="checkbox" oninvalid="this.setCustomValidity('IGNORE THIS')" required>
+	  <button type="button" onclick="window.location.reload();" class="cancelbtn" required>Cancel</button>
+    </div>
+  </form>
+</div>
+
+
+<div class="fixed1">
+	<div class="tooltip">
+		<img class="bot" src="bot_data/bot.png" style="width:105px;height:100px;margin-left:25px;" onclick="document.getElementById('id01').style.display='block'">
+		<span class="tooltiptext" head="bot"> I am ChatBot, <br> can assist you with the following services... </span>
+	</div>	
+</div>
+
+<footer>
+	<div class="row">
+		<div class="column">
+			<p id="made-by">This website is made by </p>
+			
+			<a href="team-info.html"><img src="assets/images/Teamlogo2.png" alt="Team Brainic Logo"></a>
+			<p id="copyright">Copyright ©2019 All rights reserved</p>
+		</div>
+		<div class="column">
+			<p class="address-name">Universal College of<br>Engineering</p>
+			<p class="address">Near Bhajansons &amp; Punyadham,<br>Kaman Bhiwandi Road,<br>Vasai, Thane 401 212<br><br>
+			Contact Number:<br>+91 800 xxxx xxx<br>+91 800 xxxx xxx<br><br><a href="mailto:info.ucoe@universal.edu.in">info.ucoe@universal.edu.in</a></p>
+			<p class="help"><a href="chatbot.html">Need Help?</a></p>
+			<hr class="hr-foot" style="	color: red;">
+		</div>
+	</div>	
+</footer>
+
+
+<script>
+
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+// When the user scrolls to the top of the page, slide up the navbar (50px out of the top view)
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 140 || document.documentElement.scrollTop > 140) {
+    document.getElementById("navbar-scroll").style.top = "3px";
+	document.getElementById("scroll").style.top = "0";
+  } else {
+    document.getElementById("navbar-scroll").style.top = "-100px";
+	document.getElementById("scroll").style.top = "-100px";
+  }
+}
+
+
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+	else
+	{
+		document.myform.mytext.focus();
+	}
+}
+function reply()
+{
+	a=document.getElementById("u_msg").value
+	if (a.indexOf("map") != -1)
+	{
+		var str = "Map";
+		document.getElementById("bot").innerHTML += "<br><br> Here You Go > "+str.link("assets/images/map.png");
+	}
+	else if (a.indexOf("event") != -1)
+	{
+		var str = "Events";
+		document.getElementById("bot").innerHTML += "<br><br> Check Out Here > "+str.link("Events.html");
+	}
+	else if (a.indexOf("fee") != -1)
+	{
+		document.getElementById("bot").innerHTML += "<br><br> Total Fees for Acadamic Year: <br> SE Fees = 1,20,227/- <br> TE Fees = 1,20,578/- <br> BE Fees = 1,20,958/-";
+	}
+	else if (a.indexOf("home") != -1 || a.indexOf("ucoe") != -1 || a.indexOf("Home") != -1)
+	{
+		var str = "UCoE_COMPS";
+		document.getElementById("bot").innerHTML += "<br><br> Here You Go > "+str.link("home.html");
+	}
+	else if (a.indexOf("department") != -1)
+	{
+		var str = "Department";
+		document.getElementById("bot").innerHTML += "<br><br> Here You Go > "+str.link("home.html");
+	}
+	else if (a.indexOf("faculty") != -1 || a.indexOf("staff") != -1)
+	{
+		var str = "Faculty Details";
+		document.getElementById("bot").innerHTML += "<br><br> Here You Go > "+str.link("faculty.html");
+	}
+	else if (a.indexOf("syllabus") != -1 || a.indexOf("portion") != -1)
+	{
+		var str = "Syllabus";
+		document.getElementById("bot").innerHTML += "<br><br> Check Out Here > "+str.link("syllabus.html");
+	}
+	else if (a.indexOf("attend") != -1)
+	{
+		var str = "Attendance";
+		document.getElementById("bot").innerHTML += "<br><br> Check Out Here > "+str.link("Attendance.html");
+	}
+	else if (a.indexOf("about") != -1 || a.indexOf("contact") != -1)
+	{
+		var str = "About Us";
+		document.getElementById("bot").innerHTML += "<br><br> Here You Go > "+str.link("team-info.html");
+	}
+	else if (a.indexOf("log") != -1 || a.indexOf("sign") != -1)
+	{
+		var str = "SignUp/Login ";
+		document.getElementById("bot").innerHTML += "<br><br> Here You Go > "+str.link("login.html");
+	}
+	else if (a.indexOf("hi") != -1 || a.indexOf("hello") != -1 || a.indexOf("hey") != -1)
+	{
+		document.getElementById("bot").innerHTML += "<br><br> Hey there, <br> how may i help you 😊";
+	}
+	else if (a.indexOf("team") != -1 || a.indexOf("born") != -1 || a.indexOf("create") != -1 || a.indexOf("you") != -1 || a.indexOf("name") != -1 || a.indexOf("founder") != -1 || a.indexOf("help") != -1)
+	{
+		var str = "Team Brainiac";
+		document.getElementById("bot").innerHTML += "<br><br> I am ChatBot 🤖 <br> Created By Team Brainiac <br> Founders : Parth , Meet , Karandeep <br> For More Info > "+str.link("teambrainiac.html") + "<br><br> How may i help you ?";
+	}
+	else if (a=="")
+	{
+		document.getElementById("bot").innerHTML += "<br><br> Type Something 😑";
+	}
+	else if (a.indexOf("joke") != -1)
+	{
+		document.getElementById("bot").innerHTML += "<br><br> Oh want joke ? <br> Here you go... <br> Doctor: I'm sorry but you suffer from a terminal illness and have only 10 to live. <br> Patient: What do you mean, 10? 10 what? Months? Weeks?! <br> Doctor: Nine. <br> 😂";
+	}
+	else
+	{
+		document.getElementById("bot").innerHTML += "<br><br> 😅 Sorry, I didn't get that. <br> Can you rephrase?";
+	}
+} 
+</script>
+</body>
+</html>
